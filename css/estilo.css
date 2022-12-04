@@ -1,0 +1,105 @@
+/*CSS pagina principal-------------------------------------------------------------------*/
+header {
+    line-height: 50px;
+    opacity: 100;
+	text-align: center;
+	color: white;
+	background: radial-gradient(50% 50% at 50% 50%, #000000 0%, #0000FF 0.01%, #000000 99.99%);
+}
+body{
+	background-image: url('../img/fondo.jpg');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	padding-top: 3em;
+    max-width: 40em;
+	margin: auto;
+    font-family: sans-serif;
+	text-align: center;
+}
+.TextoInicial{
+	color: white;
+	padding-top: 15em;
+	font-size: x-large;
+}
+.Principal{
+	padding: 10px 85px;
+	background: black;
+	border: 5px solid #0000FF;
+	cursor: pointer;
+	position: relative;
+	border-radius: 3px;
+	overflow: hidden;
+	height: 5px;
+	width: 10px;
+	border-radius: 100px;
+ }
+.Principal::before{
+	content: 'Iniciar';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 16px;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	font-weight: 700;
+	text-shadow: 10px 10px 10px #333;
+	transition: .2 ease;
+}
+.Principal::after{
+	content: 'listo?';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0);
+	font-size: 16px;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	font-weight: 700;
+	text-shadow: 10px 10px 10px #333;
+	transition: .2 ease;
+	opacity: 0;
+}
+.Principal:hover::before{
+	transform: translate(-50%, -50%) scale(3);
+	opacity: 0;
+}
+.Principal:hover::after{
+	transform: translate(-50%, -50%) scale(1);
+	opacity: 1;
+}
+/*CSS pagina de preguntas-------------------------------------------------------------------*/
+.sinresultado{
+	color:white;
+	padding-top: 15em;
+	font-size: x-large;
+	padding-bottom: 3em;
+}
+.contenedorPregunta{
+	background-color: none;
+	padding-top: 22em;
+	padding-bottom: 1em;
+	color: white;
+}
+.boton{
+	padding: 10px 85px;
+	background: black;
+	border: 5px solid #0000FF;
+	color:white;
+	position: relative;
+	border-radius: 3px;
+	overflow: hidden;
+	height: 5px;
+	width: 10px;
+	border-radius: 100px;
+	margin: 4em;
+}
+.boton:hover{
+	background-color: #0000FF;
+	color: #FFFFFF;
+}
+.limpiar{
+	clear: both;
+}
